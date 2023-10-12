@@ -1,0 +1,19 @@
+
+<div class="filter">
+  <label for="filter">Filter: </label>
+  <select name="filter_select" id="filter" [formControl]="filter_option">
+      <option value="all">All</option>
+      <option value="men" >Men</option>
+      <option value="women">Women</option>
+      <option value="accessories">Accessories</option>
+  </select>
+</div>
+<div class="noProducts" *ngIf="noProductsFound">
+  <h4>No Products Found. Please type the words in title property. e.g: Casual, women</h4>
+</div>
+<div class="container" >
+  <app-single-product class="card" *ngFor="let product of products | async"
+      [product]="product"
+  ></app-single-product>
+</div>
+

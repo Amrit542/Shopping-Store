@@ -1,0 +1,19 @@
+<div class="card_inner">
+    <img class="card__img" src={{product.image}} alt={{product.title}} />
+    <div>
+        <h2>{{product.category}}</h2>
+        <h4>{{product.title}}</h4>
+        <p>{{product.description}}</p>
+    </div>
+    <div class="card-price-add">
+        <span>Price : ${{product.price}}</span>
+        <button type="button" *ngIf="!isInCart"
+        (click)="toggle_add_btn(isInCart)">
+           Add
+        </button>
+        <button type="button" *ngIf="isInCart"
+         (click)="toggle_add_btn(isInCart)">
+            Remove
+        </button>
+    </div>
+</div>

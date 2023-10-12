@@ -1,0 +1,36 @@
+<div class="sidecart" #sideCart>
+  <div class="cart_content" id="cart_content">
+    <div class="cart_header">
+      <i
+        class="fa-sharp fa-solid fa-cart-shopping fa-2xl"
+        style="color: #32476c"
+      ></i>
+      <div class="header_title">
+        <h2>Your Cart</h2>
+        <span id="items_num">{{ itemsInCart.length }}</span>
+      </div>
+      <div class="close_btn_div" (click)="close_sidebar()">
+        <span >&times;</span>
+      </div>
+    </div>
+
+    <div class="cart_items">
+      <app-side-cart
+        *ngFor="let item of itemsInCart"
+        class="cart_item"
+        [cartItem]="item"
+        (delete)="deleteItem($event)"
+      ></app-side-cart>
+    </div>
+
+    <div class="cart_actions">
+      <div class="subtotal">
+        <p>Total ({{numOfItems}} items):</p>
+        <p>
+          $<span id="subtotal_price">{{ total}}</span>
+        </p>
+      </div>
+      <button (click)="checkout()">Checkout</button>
+    </div>
+  </div>
+</div>

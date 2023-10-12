@@ -1,0 +1,18 @@
+<div class="cart_item">
+    <div class="remove_item">
+        <span (click)="delete_item()">&times;</span>
+        <!-- <button (click)="delete_item()">&times;</button> -->
+    </div>
+    <div class="item_img">
+        <img src={{cartItem.image}} alt="">
+    </div>
+    <div class="item_details">
+        <p>{{cartItem.title}}</p>
+        <strong>{{cartItem.price}}</strong>
+        <div class="qty">
+            <span (click)="decreaseQty()">-</span>
+            <strong>{{cartItem.quantity}}</strong>
+            <span (click)="increaseQty()">+</span>
+        </div>
+    </div>
+</div>

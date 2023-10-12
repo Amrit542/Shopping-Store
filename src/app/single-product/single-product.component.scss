@@ -1,0 +1,77 @@
+
+$background_button: rgb(0 216 255);
+$white_color: #fff;
+
+
+.card_inner {
+  
+  
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 5px;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, .2);
+  transition: transform 0.3s ease;
+
+  &:hover {
+      transform: scale(1.01);
+  }
+
+  .card__img {
+    text-align: center !important;
+    width: 30%;
+    margin-bottom: 1rem;
+   
+  }
+ 
+
+  h2 {
+    text-decoration: underline;
+    text-align: center;
+    padding: 1rem 0;
+  }
+
+  h4 {
+    margin: 1rem 0;
+  }
+
+  .card-price-add {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem;
+    border: none;
+
+    span {
+      // font-size: 1rem;
+      padding: 5px;
+      font-weight: bolder;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.6);
+    }
+
+    button {
+      border: 1px solid $background_button;
+      box-shadow: 2px 3px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+      border-radius: 7px;
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+      font-weight: 400;
+      outline: none;
+      color: $background_button;
+      background-color: $white_color;
+
+      &:hover {
+        background-color: $background_button;
+        color: $white_color;
+      }
+
+    }
+
+   
+  }
+}

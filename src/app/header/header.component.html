@@ -1,0 +1,19 @@
+
+<header>
+  <div class="right_side">
+    <div class="search_bar">
+      <input
+        type="text"
+        placeholder="Enter product name"
+        [(ngModel)]="searchString"
+        (keyup)="search()"
+      /><i class="fa-solid fa-magnifying-glass"></i>
+    </div>
+    <div class="cart_btn" (click)="open_cart()">
+      <i class="fa-solid fa-cart-shopping"></i>
+      <span
+        >Cart: <span id="cart_items_num">({{ itemInCart }})</span></span
+      >
+    </div>
+  </div>
+</header>
